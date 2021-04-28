@@ -1,4 +1,5 @@
 import 'package:daily_app/home/Home.dart';
+import 'package:daily_app/networking/FirstPage.dart';
 import 'package:flutter/material.dart';
 
 import 'add_training_page/AddTrainingPage.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => Home(),
+        '/': (context) => FirstPage(),
         '/addTraining': (context) => AddTrainingPage()
       },
     );
