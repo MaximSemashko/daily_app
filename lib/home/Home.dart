@@ -1,5 +1,6 @@
 import 'package:daily_app/trainings/presentation/TrainingsPage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -26,7 +27,7 @@ class _HomeState extends State<Home> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.fitness_center),
-              label: 'Trainings',
+              label: AppLocalizations.of(context)!.trainings,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.event_note),
@@ -48,16 +49,20 @@ class _HomeState extends State<Home> {
     return (await showDialog(
           context: context,
           builder: (context) => new AlertDialog(
-            title: new Text('Are you sure?'),
-            content: new Text('Do you want to exit an App'),
+            title:
+                new Text(AppLocalizations.of(context)!.logoutAlertDialogTitle),
+            content: new Text(
+                AppLocalizations.of(context)!.logoutAlertDialogContent),
             actions: <Widget>[
               TextButton(
                 onPressed: () => Navigator.of(context).pop(false),
-                child: new Text('No'),
+                child: new Text(AppLocalizations.of(context)!
+                    .logoutAlertDialogNegativeButton),
               ),
               TextButton(
                 onPressed: () => Navigator.of(context).pop(true),
-                child: new Text('Yes'),
+                child: new Text(AppLocalizations.of(context)!
+                    .logoutAlertDialogPositiveButton),
               ),
             ],
           ),

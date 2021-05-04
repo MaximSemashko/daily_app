@@ -1,5 +1,6 @@
 import 'package:daily_app/trainings/data/entities/Training.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AddTrainingPage extends StatefulWidget {
   @override
@@ -31,7 +32,7 @@ class _AddTrainingPageState extends State<AddTrainingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add training'),
+        title: Text(AppLocalizations.of(context)!.helloWorld),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -45,11 +46,11 @@ class _AddTrainingPageState extends State<AddTrainingPage> {
                 child: TextFormField(
                   controller: nameTextController,
                   decoration: InputDecoration(
-                    hintText: 'Name',
+                    hintText: AppLocalizations.of(context)!.nameHint,
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please enter correct name';
+                      return AppLocalizations.of(context)!.nameTextFieldHint;
                     }
                     return null;
                   },
@@ -60,7 +61,7 @@ class _AddTrainingPageState extends State<AddTrainingPage> {
                 child: TextFormField(
                   controller: descriptionTextController,
                   decoration: InputDecoration(
-                    labelText: 'Description',
+                    labelText: AppLocalizations.of(context)!.descriptionHint,
                   ),
                 ),
               ),
@@ -98,7 +99,7 @@ class _AddTrainingPageState extends State<AddTrainingPage> {
                     print(training.toString());
                     Navigator.of(context).pop(training);
                   },
-                  child: Text('Add'),
+                  child: Text(AppLocalizations.of(context)!.addButtonText),
                 ),
               )
             ],
