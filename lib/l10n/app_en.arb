@@ -1,0 +1,12 @@
+{
+  "helloWorld": "Hello World!",
+  "nameTextFieldHint": "Please enter correct name",
+  "nameHint": "Name",
+  "descriptionHint": "Description",
+  "addButtonText": "Add",
+  "trainings": "Trainings",
+  "logoutAlertDialogTitle": "Are you sure?",
+  "logoutAlertDialogContent": "Do you want to exit an App",
+  "logoutAlertDialogPositiveButton": "yes",
+  "logoutAlertDialogNegativeButton": "no"
+}

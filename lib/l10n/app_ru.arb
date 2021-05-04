@@ -1,0 +1,12 @@
+{
+  "helloWorld": "Привет мир",
+  "nameTextFieldHint": "Введите корректное имя",
+  "nameHint": "Имя",
+  "descriptionHint": "Описание",
+  "addButtonText": "Добавить",
+  "trainings": "Тренировки",
+  "logoutAlertDialogTitle": "Вы уверены?",
+  "logoutAlertDialogContent": "Вы действительно хотите выйти",
+  "logoutAlertDialogPositiveButton": "да",
+  "logoutAlertDialogNegativeButton": "нет"
+}
